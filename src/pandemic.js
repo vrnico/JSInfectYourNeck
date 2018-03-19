@@ -12,33 +12,30 @@ export class Country{
   }
 
   setInfected(disease) {
+    this.infected = true;
     let interval = setInterval(() => {
       this.infectedPop += 1000 / this.pov;
-      if (this.infectedPop >= this.pop/2) {
-        disease.RandomEvent()
-      } else if (this.infectedPop >= this.pop) {
+      if (this.infectedPop >= this.pop) {
         this.consumed = true;
         clearInterval(interval);
       }
-    }, 1000 * disease.infect);
+    }, 1000 / disease.infect);
   }
 
-  infection(disease) {
-    if (this.infected === true) {
-      setInfected(disease)
-    }
-  }
+  // infection(disease) {
+  //     setInfected(disease)
+  //   }
 }
 
 export function randCountries() {
   let array = [];
-  for (i=0; i <= 23; i++){
-    pop = (Math.floor(Math.random()*6)+1);
-    pov = (Math.floor(Math.random()*10)+1);
-    cli = (Math.floor(Math.random()*10)+1);
-    tra = (Math.floor(Math.random()*10)+1);
+  for (let i=0; i <= 23; i++){
+    let pop = (Math.floor(Math.random()*10000)+1);
+    let pov = (Math.floor(Math.random()*10)+1);
+    let cli = (Math.floor(Math.random()*10)+1);
+    let tra = (Math.floor(Math.random()*10)+1);
 
-    newCountry = new Country(pop, pov, cli, tra);
+    let newCountry = new Country(pop, pov, cli, tra);
     array.push(newCountry);
   }
   return array;

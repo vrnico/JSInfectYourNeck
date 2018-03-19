@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Plague LLC</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="disease-form-panel"class="panel panel-info">
+        <div class="panel-heading">
+          <h1>Choose Your Disease Type</h1>
+        </div>
+        <div class="panel-body">
+          <form id="disease-form">
+            <div class="form-group">
+                <label for="name">Name Your Disease</label>
+                <input class="form-control" type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="disease-type">Choose Type</label>
+                <select class="form-control" id="disease-type">
+                  <option value="Bactierial">Bactierial</option>
+                  <option value="Viral">Viral</option>
+                  <option value="Fungal">Fungal</option>
+                  <option value="Parasitic">Parasitic</option>
+                </select>
+            </div>
+            <button class="btn btn-success" type="submit" name="button">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h1 id="disease-name-display">Disease Name</h1>
+        </div>
+        <div class="panel-body">
+          <h3 id="disease-type-display">Disease Type</h3>
+          <h3 id="disease-infect-display">Disease Infectivity</h3>
+          <h3 id="disease-dist-display">Disease Infection Distance</h3>
+          <h3 id="disease-resist-display">Disease Resistance</h3>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </body>
+</html>
